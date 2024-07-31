@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import br.com.alura.aluraesporte.R
 import br.com.alura.aluraesporte.extensions.formatParaMoedaBrasileira
 import br.com.alura.aluraesporte.model.Pagamento
@@ -24,9 +25,9 @@ private const val COMPRA_REALIZADA = "Compra realizada"
 
 class PagamentoFragment : Fragment() {
 
+    private val arguments by navArgs<PagamentoFragmentArgs>()
     private val produtoId by lazy {
-        arguments?.getLong(CHAVE_PRODUTO_ID)
-            ?: throw IllegalArgumentException(ID_PRODUTO_INVALIDO)
+        arguments.produtoId
     }
 
     private val controller by lazy { findNavController() }
@@ -85,7 +86,8 @@ class PagamentoFragment : Fragment() {
     }
 
     private fun vaiParaListaProdutos() {
-        controller.navigate(R.id.action_pagmento_to_listaProdutos)
+        val direction = PagamentoFragmentDirections.actionPagmentoToListaProdutos()
+        controller.navigate(direction)
     }
 
     private fun criaPagamento(): Pagamento? {

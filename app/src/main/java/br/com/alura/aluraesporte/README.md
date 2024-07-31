@@ -1,1 +1,1 @@
-### Ponto inicial da aula 1 do modulo 5 (Navigation part 1: transação de telas)  Configurando animações
+### Ponto inicial da aula 2 do modulo 5 (Navigation part 1: transação de telas)  Aplicando última refatoração

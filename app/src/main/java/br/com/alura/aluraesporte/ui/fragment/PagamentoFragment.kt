@@ -33,7 +33,6 @@ class PagamentoFragment : Fragment() {
 
     private val viewModel: PagamentoViewModel by viewModel()
     private lateinit var produtoEscolhido: Produto
-    var quandoPagamentoRealizado: (idPagamento: Long) -> Unit = {}
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -79,10 +78,14 @@ class PagamentoFragment : Fragment() {
                 .observe(this, Observer {
                     it?.dado?.let {
                         Toast.makeText(context, COMPRA_REALIZADA, Toast.LENGTH_SHORT).show()
-                        controller.navigate(R.id.listaProdutos)
+                        vaiParaListaProdutos()
                     }
                 })
         }
+    }
+
+    private fun vaiParaListaProdutos() {
+        controller.popBackStack(R.id.listaProdutos, false)
     }
 
     private fun criaPagamento(): Pagamento? {

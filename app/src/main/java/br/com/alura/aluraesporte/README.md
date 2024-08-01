@@ -1,1 +1,1 @@
-### Ponto inicial da aula 2 do modulo 1 (Navigation part 2: novas features e reutilizacao de codigo)  Ajustando o fluxo de navegação
+### Ponto inicial da aula 3 do modulo 1 (Navigation part 2: novas features e reutilizacao de codigo)  Configurando a primeira com condição

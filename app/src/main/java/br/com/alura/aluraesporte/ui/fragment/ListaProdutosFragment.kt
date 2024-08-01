@@ -30,6 +30,9 @@ class ListaProdutosFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if(loginViewModel.naoEstaLogado()){
+            vaiParaLogin()
+        }
         buscaProdutos()
         setHasOptionsMenu(true)
     }
@@ -66,11 +69,14 @@ class ListaProdutosFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if(item?.itemId == R.id.menu_lista_produto_deslogar){
             loginViewModel.desloga()
-            val direction =
-                ListaProdutosFragmentDirections.actionListaProdutosToLogin()
-            controller.navigate(direction)
+            vaiParaLogin()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun vaiParaLogin() {
+        val direction = ListaProdutosFragmentDirections.actionListaProdutosToLogin()
+        controller.navigate(direction)
     }
 
     private fun configuraRecyclerView() {

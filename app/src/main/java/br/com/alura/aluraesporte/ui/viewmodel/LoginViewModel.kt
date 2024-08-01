@@ -4,7 +4,9 @@ import androidx.lifecycle.ViewModel
 import br.com.alura.aluraesporte.repository.LoginRepository
 
 class LoginViewModel(private val repository: LoginRepository) : ViewModel() {
+
     fun loga() = repository.loga()
     fun estaLogado() : Boolean = repository.estaLogado()
+    fun naoEstaLogado() : Boolean = !estaLogado()
     fun desloga() = repository.desloga()
 }

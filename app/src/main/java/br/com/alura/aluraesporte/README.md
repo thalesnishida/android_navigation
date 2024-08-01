@@ -1,1 +1,1 @@
-### Ponto inicial da aula 2 do modulo 5 (Navigation part 1: transação de telas)  Aplicando última refatoração
+### Ponto inicial da aula 1 do modulo 1 (Navigation part 2: novas features e reutilizacao de codigo)  Adicionando Tela de Login

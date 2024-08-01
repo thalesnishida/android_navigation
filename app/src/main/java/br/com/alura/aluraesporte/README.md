@@ -1,1 +1,1 @@
-### Ponto inicial da aula 1 do modulo 2 (Navigation part 2: novas features e reutilizacao de codigo)  Implementando o comportamento de deslogar
+### Ponto inicial da aula 2 do modulo 2 (Navigation part 2: novas features e reutilizacao de codigo)  Refatorando Código

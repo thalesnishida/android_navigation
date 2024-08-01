@@ -1,1 +1,1 @@
-### Ponto inicial da aula 3 do modulo 1 (Navigation part 2: novas features e reutilizacao de codigo)  Configurando a primeira com condição
+### Ponto inicial da aula 1 do modulo 2 (Navigation part 2: novas features e reutilizacao de codigo)  Implementando o comportamento de deslogar

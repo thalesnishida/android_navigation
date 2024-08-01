@@ -1,1 +1,1 @@
-### Ponto inicial da aula 1 do modulo 1 (Navigation part 2: novas features e reutilizacao de codigo)  Adicionando Tela de Login
+### Ponto inicial da aula 2 do modulo 1 (Navigation part 2: novas features e reutilizacao de codigo)  Ajustando o fluxo de navegação

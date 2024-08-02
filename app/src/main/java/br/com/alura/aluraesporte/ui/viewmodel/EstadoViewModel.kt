@@ -6,16 +6,23 @@ import androidx.lifecycle.ViewModel
 
 class EstadoViewModel : ViewModel() {
 
-    val appBar: LiveData<Boolean> get() = _appBar
+    val components: LiveData<ComponentesVisuais> get() = _components
 
-    private var _appBar: MutableLiveData<Boolean> = MutableLiveData<Boolean>().also {
-        it.value = temAppBar
-    }
+    private var _components: MutableLiveData<ComponentesVisuais> =
+        MutableLiveData<ComponentesVisuais>().also {
+            it.value = temComponentes
+        }
 
-    var temAppBar: Boolean = false
+    var temComponentes: ComponentesVisuais = ComponentesVisuais()
         set(value) {
             field = value
-            _appBar.value = value
+            _components.value = value
         }
 
 }
+
+class ComponentesVisuais(
+    val appBar: Boolean = false,
+    val bottomNavigation: Boolean = false
+)
+

@@ -1,1 +1,1 @@
-### Ponto inicial da aula 1 do modulo 4 (Navigation part 2: novas features e reutilizacao de codigo) Criando o ViewModel de estado do App
+### Ponto inicial da aula 2 do modulo 4 (Navigation part 2: novas features e reutilizacao de codigo) Utilizando ViewModel compartilhado

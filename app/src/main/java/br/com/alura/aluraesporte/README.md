@@ -1,1 +1,1 @@
-### Ponto inicial da aula 1 do modulo 3 (Navigation part 2: novas features e reutilizacao de codigo)  Utilizando Códigos globais
+### Ponto inicial da aula 2 do modulo 3 (Navigation part 2: novas features e reutilizacao de codigo)  Aplicando configurações na mudança de destinos

@@ -20,20 +20,14 @@ import kotlinx.coroutines.GlobalScope
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
-class DetalhesProdutoFragment : Fragment() {
+class DetalhesProdutoFragment : BaseFragment() {
 
     private val arguments by navArgs<DetalhesProdutoFragmentArgs>()
     private val produtoId by lazy {
         arguments.produtoId
     }
-    private val loginViewModel: LoginViewModel by viewModel()
     private val viewModel: DetalhesProdutoViewModel by viewModel { parametersOf(produtoId) }
     private val controller by lazy { findNavController() }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,24 +39,6 @@ class DetalhesProdutoFragment : Fragment() {
             container,
             false
         )
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater?.inflate(R.menu.menu_lista_produto, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if(item?.itemId == R.id.menu_lista_produto_deslogar){
-            loginViewModel.desloga()
-            vaiParaLogin()
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun vaiParaLogin() {
-        val direction = DetalhesProdutoFragmentDirections.actionGlobalLogin()
-        controller.navigate(direction)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

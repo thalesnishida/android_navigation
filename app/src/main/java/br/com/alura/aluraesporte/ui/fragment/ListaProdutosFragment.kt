@@ -21,18 +21,14 @@ import kotlinx.android.synthetic.main.lista_produtos.*
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class ListaProdutosFragment : Fragment() {
+class ListaProdutosFragment : BaseFragment() {
 
     private val viewModel: ProdutosViewModel by viewModel()
-    private val loginViewModel: LoginViewModel by viewModel()
     private val adapter: ProdutosAdapter by inject()
     private val controller by lazy { findNavController() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if(loginViewModel.naoEstaLogado()){
-            vaiParaLogin()
-        }
         buscaProdutos()
         setHasOptionsMenu(true)
     }
@@ -59,24 +55,6 @@ class ListaProdutosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configuraRecyclerView()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater?.inflate(R.menu.menu_lista_produto, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if(item?.itemId == R.id.menu_lista_produto_deslogar){
-            loginViewModel.desloga()
-            vaiParaLogin()
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun vaiParaLogin() {
-        val direction = ListaProdutosFragmentDirections.actionListaProdutosToLogin()
-        controller.navigate(direction)
     }
 
     private fun configuraRecyclerView() {

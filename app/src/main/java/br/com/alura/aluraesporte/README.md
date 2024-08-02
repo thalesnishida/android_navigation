@@ -1,1 +1,1 @@
-### Ponto inicial da aula 1 do modulo 5 (Navigation part 2: novas features e reutilizacao de codigo) Implementando a tela de lista de pagamentos
+### Ponto inicial da aula 2 do modulo 5 (Navigation part 2: novas features e reutilizacao de codigo)  Implementando o Bottom Navigation

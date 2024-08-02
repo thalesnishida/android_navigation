@@ -1,1 +1,1 @@
-### Ponto inicial da aula 3 do modulo 3 (Navigation part 2: novas features e reutilizacao de codigo)  Adicionando a tela de cadastro de usuário
+### Ponto inicial da aula 1 do modulo 4 (Navigation part 2: novas features e reutilizacao de codigo) Criando o ViewModel de estado do App

@@ -1,1 +1,1 @@
-### Ponto inicial da aula 2 do modulo 5 (Navigation part 2: novas features e reutilizacao de codigo)  Implementando o Bottom Navigation
+### Ponto inicial da aula 3 do modulo 5 (Navigation part 2: novas features e reutilizacao de codigo)  Refatorando o View Model do estado do App

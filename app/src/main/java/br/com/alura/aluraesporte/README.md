@@ -1,1 +1,1 @@
-### Ponto inicial da aula 2 do modulo 3 (Navigation part 2: novas features e reutilizacao de codigo)  Aplicando configurações na mudança de destinos
+### Ponto inicial da aula 3 do modulo 3 (Navigation part 2: novas features e reutilizacao de codigo)  Adicionando a tela de cadastro de usuário

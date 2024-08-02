@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.alura.aluraesporte.R
 import br.com.alura.aluraesporte.ui.viewmodel.LoginViewModel
+import kotlinx.android.synthetic.main.login.login_botao_cadastra_usuario
 import kotlinx.android.synthetic.main.login.login_botao_logar
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -34,6 +35,14 @@ class LoginFragment : Fragment (){
             viewModel.loga()
             vaiParaListaProdutos()
         }
+        login_botao_cadastra_usuario.setOnClickListener {
+            vaiParaCadastroUsuario()
+        }
+    }
+
+    private fun vaiParaCadastroUsuario() {
+        val direction = LoginFragmentDirections.actionLoginToCadastraUsuario()
+        controller.navigate(direction)
     }
 
     private fun vaiParaListaProdutos() {

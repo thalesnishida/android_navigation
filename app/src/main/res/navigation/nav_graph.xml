@@ -78,6 +78,13 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/login"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_cadastraUsuario"
+            app:destination="@id/cadastraUsuario"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <action
         android:id="@+id/action_global_login"
@@ -88,6 +95,12 @@
         app:popExitAnim="@anim/nav_default_pop_exit_anim"
         app:popUpTo="@id/listaProdutos"
         app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/cadastraUsuario"
+        android:name="br.com.alura.aluraesporte.ui.fragment.CadastraUsuarioFragment"
+        android:label="Cadatra Usúario"
+        tools:layout="@layout/cadastrar_usuario"
+        />
 
 
 </navigation>

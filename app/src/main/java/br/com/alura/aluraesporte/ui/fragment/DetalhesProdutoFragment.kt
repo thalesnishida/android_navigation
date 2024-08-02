@@ -14,15 +14,18 @@ import androidx.navigation.fragment.navArgs
 import br.com.alura.aluraesporte.R
 import br.com.alura.aluraesporte.extensions.formatParaMoedaBrasileira
 import br.com.alura.aluraesporte.ui.viewmodel.DetalhesProdutoViewModel
+import br.com.alura.aluraesporte.ui.viewmodel.EstadoViewModel
 import br.com.alura.aluraesporte.ui.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.detalhes_produto.*
 import kotlinx.coroutines.GlobalScope
+import org.koin.android.viewmodel.ext.android.sharedViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
 class DetalhesProdutoFragment : BaseFragment() {
 
     private val arguments by navArgs<DetalhesProdutoFragmentArgs>()
+    private val estadoViewModel: EstadoViewModel by sharedViewModel()
     private val produtoId by lazy {
         arguments.produtoId
     }
@@ -43,6 +46,7 @@ class DetalhesProdutoFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        estadoViewModel.temAppBar = true
         buscaProduto()
         configuraBotaoComprar()
     }
